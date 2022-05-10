@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/Spotify-icon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/img/Spotify-icon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -19,21 +19,20 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Spotify clone</title>
-    <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="style/index.css">
   </head>
   <body>
+  <!--  <script type="module" src="./js/test.js"></script>-->
     <header class="header">
       <nav class="left_menu_nav">
         <a>
-          <img class="logo" src="spoty.png" alt="">
+          <img class="logo" src="/img/spoty.png" alt="">
         </a>
         <ul class="left_menu this_ul">
-          <li class="left_menu_liElement"><svg role="img" height="24" width="24" class="Svg-sc-1bi12j5-0 hDgDGI home-active-icon img_left left_menu_svgImg" viewBox="0 0 24 24"><path fill="white" d="M21 22V7.174l-9.001-5.195L3 7.214V22h7v-7h4v7z"></path></svg><a class="left_menu_link" href="">Главная</a></li>
-          <li class="left_menu_liElement"><svg role="img" height="24" width="24" class="Svg-sc-1bi12j5-0 hDgDGI search-icon img_left left_menu_svgImg" viewBox="0 0 24 24"><path fill="white" d="M16.387 16.623A8.47 8.47 0 0019 10.5a8.5 8.5 0 10-8.5 8.5 8.454 8.454 0 005.125-1.73l4.401 5.153.76-.649-4.399-5.151zM10.5 18C6.364 18 3 14.636 3 10.5S6.364 3 10.5 3 18 6.364 18 10.5 14.636 18 10.5 18z"></path></svg><a class="left_menu_link" href="">Поиск</a></li>
-          <li class="left_menu_liElement"><svg role="img" height="24" width="24" class="Svg-sc-1bi12j5-0 hDgDGI collection-icon img_left left_menu_svgImg" viewBox="0 0 24 24"><path fill="white" d="M13.66 4.097l-.913.406 7.797 17.513.914-.406L13.66 4.097zM3 22h1V4H3v18zm6 0h1V4H9v18z"></path></svg><a class="left_menu_link" href="">Моя медиатека</a></li>
+          <li class="left_menu_liElement"><svg role="img" height="24" width="24" class="Svg-sc-1bi12j5-0 hDgDGI home-active-icon img_left left_menu_svgImg" viewBox="0 0 24 24"><path fill="white" d="M21 22V7.174l-9.001-5.195L3 7.214V22h7v-7h4v7z"></path></svg><a class="left_menu_link" href="./index.html">Главная</a></li>
+          <li class="left_menu_liElement"><svg role="img" height="24" width="24" class="Svg-sc-1bi12j5-0 hDgDGI search-icon img_left left_menu_svgImg" viewBox="0 0 24 24"><path fill="white" d="M16.387 16.623A8.47 8.47 0 0019 10.5a8.5 8.5 0 10-8.5 8.5 8.454 8.454 0 005.125-1.73l4.401 5.153.76-.649-4.399-5.151zM10.5 18C6.364 18 3 14.636 3 10.5S6.364 3 10.5 3 18 6.364 18 10.5 14.636 18 10.5 18z"></path></svg><a class="left_menu_link" href="./search.html">Поиск</a></li>
+          <li class="left_menu_liElement"><svg role="img" height="24" width="24" class="Svg-sc-1bi12j5-0 hDgDGI collection-icon img_left left_menu_svgImg" viewBox="0 0 24 24"><path fill="white" d="M13.66 4.097l-.913.406 7.797 17.513.914-.406L13.66 4.097zM3 22h1V4H3v18zm6 0h1V4H9v18z"></path></svg><a class="left_menu_link" href="/">Моя медиатека</a></li>
          </ul>
-
-
 
         <div class="two_buttons_menu">
           <button class="add_playlist">
@@ -69,8 +68,8 @@
           </button>
         </div>
         <div class="rigth">
-          <button class="rigth_but registr">ЗАРЕГЕСТРИРОВАТЬСЯ</button>
-          <button class="rigth_but join">ВОЙТИ  </button>
+          <button class="right_but registr">ЗАРЕГЕСТРИРОВАТЬСЯ</button>
+          <button class="right_but join">ВОЙТИ  </button>
         </div>
       </nav>
       <div class="Recommendations_menu_div">
@@ -92,7 +91,7 @@
           <ul class="recommendationsLIST_ul this_ul">
               <li>
                   <div class="recommendationsLIST_ul_li_div">
-                      <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                       <div class="recommendationsLIST_ul_li_div_NAME">
                           Жизнь котейки
                       </div>
@@ -103,7 +102,7 @@
               </li>
               <li>
                 <div class="recommendationsLIST_ul_li_div">
-                    <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                    <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                     <div class="recommendationsLIST_ul_li_div_NAME">
                         Жизнь котейки
                     </div>
@@ -114,7 +113,7 @@
             </li>
             <li>
               <div class="recommendationsLIST_ul_li_div">
-                  <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                  <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                   <div class="recommendationsLIST_ul_li_div_NAME">
                       Жизнь котейки
                   </div>
@@ -125,7 +124,7 @@
           </li>
           <li>
             <div class="recommendationsLIST_ul_li_div">
-                <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                 <div class="recommendationsLIST_ul_li_div_NAME">
                     Жизнь котейки
                 </div>
@@ -136,7 +135,7 @@
         </li>
         <li>
           <div class="recommendationsLIST_ul_li_div">
-              <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+              <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
               <div class="recommendationsLIST_ul_li_div_NAME">
                   Жизнь котейки
               </div>
@@ -147,7 +146,7 @@
       </li>
       <li>
         <div class="recommendationsLIST_ul_li_div">
-            <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+            <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
             <div class="recommendationsLIST_ul_li_div_NAME">
                 Жизнь котейки
             </div>
@@ -158,7 +157,7 @@
     </li>
     <li>
                   <div class="recommendationsLIST_ul_li_div">
-                      <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                       <div class="recommendationsLIST_ul_li_div_NAME">
                           Жизнь котейки
                       </div>
@@ -190,7 +189,7 @@
           <ul class="recommendationsLIST_ul this_ul">
               <li>
                   <div class="recommendationsLIST_ul_li_div">
-                      <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                       <div class="recommendationsLIST_ul_li_div_NAME">
                           Жизнь котейки
                       </div>
@@ -201,7 +200,7 @@
               </li>
               <li>
                 <div class="recommendationsLIST_ul_li_div">
-                    <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                    <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                     <div class="recommendationsLIST_ul_li_div_NAME">
                         Жизнь котейки
                     </div>
@@ -212,7 +211,7 @@
             </li>
             <li>
               <div class="recommendationsLIST_ul_li_div">
-                  <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                  <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                   <div class="recommendationsLIST_ul_li_div_NAME">
                       Жизнь котейки
                   </div>
@@ -223,7 +222,7 @@
           </li>
           <li>
             <div class="recommendationsLIST_ul_li_div">
-                <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                 <div class="recommendationsLIST_ul_li_div_NAME">
                     Жизнь котейки
                 </div>
@@ -234,7 +233,7 @@
         </li>
         <li>
           <div class="recommendationsLIST_ul_li_div">
-              <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+              <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
               <div class="recommendationsLIST_ul_li_div_NAME">
                   Жизнь котейки
               </div>
@@ -245,7 +244,7 @@
       </li>
       <li>
         <div class="recommendationsLIST_ul_li_div">
-            <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+            <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
             <div class="recommendationsLIST_ul_li_div_NAME">
                 Жизнь котейки
             </div>
@@ -256,7 +255,7 @@
     </li>
     <li>
                   <div class="recommendationsLIST_ul_li_div">
-                      <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                       <div class="recommendationsLIST_ul_li_div_NAME">
                           Жизнь котейки
                       </div>
@@ -288,7 +287,7 @@
           <ul class="recommendationsLIST_ul this_ul">
               <li>
                   <div class="recommendationsLIST_ul_li_div">
-                      <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                       <div class="recommendationsLIST_ul_li_div_NAME">
                           Жизнь котейки
                       </div>
@@ -299,7 +298,7 @@
               </li>
               <li>
                 <div class="recommendationsLIST_ul_li_div">
-                    <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                    <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                     <div class="recommendationsLIST_ul_li_div_NAME">
                         Жизнь котейки
                     </div>
@@ -310,7 +309,7 @@
             </li>
             <li>
               <div class="recommendationsLIST_ul_li_div">
-                  <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                  <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                   <div class="recommendationsLIST_ul_li_div_NAME">
                       Жизнь котейки
                   </div>
@@ -321,7 +320,7 @@
           </li>
           <li>
             <div class="recommendationsLIST_ul_li_div">
-                <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                 <div class="recommendationsLIST_ul_li_div_NAME">
                     Жизнь котейки
                 </div>
@@ -332,7 +331,7 @@
         </li>
         <li>
           <div class="recommendationsLIST_ul_li_div">
-              <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+              <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
               <div class="recommendationsLIST_ul_li_div_NAME">
                   Жизнь котейки
               </div>
@@ -343,7 +342,7 @@
       </li>
       <li>
         <div class="recommendationsLIST_ul_li_div">
-            <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+            <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
             <div class="recommendationsLIST_ul_li_div_NAME">
                 Жизнь котейки
             </div>
@@ -354,7 +353,7 @@
     </li>
     <li>
                   <div class="recommendationsLIST_ul_li_div">
-                      <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                       <div class="recommendationsLIST_ul_li_div_NAME">
                           Жизнь котейки
                       </div>
@@ -386,7 +385,7 @@
           <ul class="recommendationsLIST_ul this_ul">
               <li>
                   <div class="recommendationsLIST_ul_li_div">
-                      <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                       <div class="recommendationsLIST_ul_li_div_NAME">
                           Жизнь котейки
                       </div>
@@ -397,7 +396,7 @@
               </li>
               <li>
                 <div class="recommendationsLIST_ul_li_div">
-                    <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                    <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                     <div class="recommendationsLIST_ul_li_div_NAME">
                         Жизнь котейки
                     </div>
@@ -408,7 +407,7 @@
             </li>
             <li>
               <div class="recommendationsLIST_ul_li_div">
-                  <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                  <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                   <div class="recommendationsLIST_ul_li_div_NAME">
                       Жизнь котейки
                   </div>
@@ -419,7 +418,7 @@
           </li>
           <li>
             <div class="recommendationsLIST_ul_li_div">
-                <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                 <div class="recommendationsLIST_ul_li_div_NAME">
                     Жизнь котейки
                 </div>
@@ -430,7 +429,7 @@
         </li>
         <li>
           <div class="recommendationsLIST_ul_li_div">
-              <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+              <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
               <div class="recommendationsLIST_ul_li_div_NAME">
                   Жизнь котейки
               </div>
@@ -441,7 +440,7 @@
       </li>
       <li>
         <div class="recommendationsLIST_ul_li_div">
-            <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+            <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
             <div class="recommendationsLIST_ul_li_div_NAME">
                 Жизнь котейки
             </div>
@@ -452,7 +451,7 @@
     </li>
     <li>
                   <div class="recommendationsLIST_ul_li_div">
-                      <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                       <div class="recommendationsLIST_ul_li_div_NAME">
                           Жизнь котейки
                       </div>
@@ -484,7 +483,7 @@
           <ul class="recommendationsLIST_ul this_ul">
               <li>
                   <div class="recommendationsLIST_ul_li_div">
-                      <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                       <div class="recommendationsLIST_ul_li_div_NAME">
                           Жизнь котейки
                       </div>
@@ -495,7 +494,7 @@
               </li>
               <li>
                 <div class="recommendationsLIST_ul_li_div">
-                    <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                    <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                     <div class="recommendationsLIST_ul_li_div_NAME">
                         Жизнь котейки
                     </div>
@@ -506,7 +505,7 @@
             </li>
             <li>
               <div class="recommendationsLIST_ul_li_div">
-                  <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                  <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                   <div class="recommendationsLIST_ul_li_div_NAME">
                       Жизнь котейки
                   </div>
@@ -517,7 +516,7 @@
           </li>
           <li>
             <div class="recommendationsLIST_ul_li_div">
-                <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                 <div class="recommendationsLIST_ul_li_div_NAME">
                     Жизнь котейки
                 </div>
@@ -528,7 +527,7 @@
         </li>
         <li>
           <div class="recommendationsLIST_ul_li_div">
-              <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+              <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
               <div class="recommendationsLIST_ul_li_div_NAME">
                   Жизнь котейки
               </div>
@@ -539,7 +538,7 @@
       </li>
       <li>
         <div class="recommendationsLIST_ul_li_div">
-            <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+            <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
             <div class="recommendationsLIST_ul_li_div_NAME">
                 Жизнь котейки
             </div>
@@ -550,7 +549,7 @@
     </li>
     <li>
                   <div class="recommendationsLIST_ul_li_div">
-                      <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                       <div class="recommendationsLIST_ul_li_div_NAME">
                           Жизнь котейки
                       </div>
@@ -582,7 +581,7 @@
           <ul class="recommendationsLIST_ul  this_ul">
               <li>
                   <div class="recommendationsLIST_ul_li_div">
-                      <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                       <div class="recommendationsLIST_ul_li_div_NAME">
                           Жизнь котейки
                       </div>
@@ -593,7 +592,7 @@
               </li>
               <li>
                 <div class="recommendationsLIST_ul_li_div">
-                    <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                    <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                     <div class="recommendationsLIST_ul_li_div_NAME">
                         Жизнь котейки
                     </div>
@@ -604,7 +603,7 @@
             </li>
             <li>
               <div class="recommendationsLIST_ul_li_div">
-                  <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                  <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                   <div class="recommendationsLIST_ul_li_div_NAME">
                       Жизнь котейки
                   </div>
@@ -615,7 +614,7 @@
           </li>
           <li>
             <div class="recommendationsLIST_ul_li_div">
-                <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                 <div class="recommendationsLIST_ul_li_div_NAME">
                     Жизнь котейки
                 </div>
@@ -626,7 +625,7 @@
         </li>
         <li>
           <div class="recommendationsLIST_ul_li_div">
-              <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+              <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
               <div class="recommendationsLIST_ul_li_div_NAME">
                   Жизнь котейки
               </div>
@@ -637,7 +636,7 @@
       </li>
       <li>
         <div class="recommendationsLIST_ul_li_div">
-            <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+            <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
             <div class="recommendationsLIST_ul_li_div_NAME">
                 Жизнь котейки
             </div>
@@ -648,7 +647,7 @@
     </li>
     <li>
                   <div class="recommendationsLIST_ul_li_div">
-                      <img class="recommendationsLIST_ul_li_div_IMG" src="cat_1.jpg" alt="Картинка котика">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
                       <div class="recommendationsLIST_ul_li_div_NAME">
                           Жизнь котейки
                       </div>
