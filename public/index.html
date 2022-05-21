@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/img/Spotify-icon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -18,20 +18,657 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Spotify clone</title>
+    <link rel="stylesheet" href="style/index.css">
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <!--  <script type="module" src="./js/test.js"></script>-->
+    <header class="header">
+      <nav class="left_menu_nav">
+        <a>
+          <img class="logo" src="/img/spoty.png" alt="">
+        </a>
+        <ul class="left_menu this_ul">
+          <li class="left_menu_liElement"><svg role="img" height="24" width="24" class="Svg-sc-1bi12j5-0 hDgDGI home-active-icon img_left left_menu_svgImg" viewBox="0 0 24 24"><path fill="white" d="M21 22V7.174l-9.001-5.195L3 7.214V22h7v-7h4v7z"></path></svg><a class="left_menu_link" href="./index.html">Главная</a></li>
+          <li class="left_menu_liElement"><svg role="img" height="24" width="24" class="Svg-sc-1bi12j5-0 hDgDGI search-icon img_left left_menu_svgImg" viewBox="0 0 24 24"><path fill="white" d="M16.387 16.623A8.47 8.47 0 0019 10.5a8.5 8.5 0 10-8.5 8.5 8.454 8.454 0 005.125-1.73l4.401 5.153.76-.649-4.399-5.151zM10.5 18C6.364 18 3 14.636 3 10.5S6.364 3 10.5 3 18 6.364 18 10.5 14.636 18 10.5 18z"></path></svg><a class="left_menu_link" href="./search.html">Поиск</a></li>
+          <li class="left_menu_liElement"><svg role="img" height="24" width="24" class="Svg-sc-1bi12j5-0 hDgDGI collection-icon img_left left_menu_svgImg" viewBox="0 0 24 24"><path fill="white" d="M13.66 4.097l-.913.406 7.797 17.513.914-.406L13.66 4.097zM3 22h1V4H3v18zm6 0h1V4H9v18z"></path></svg><a class="left_menu_link" href="/">Моя медиатека</a></li>
+         </ul>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+        <div class="two_buttons_menu">
+          <button class="add_playlist">
+            <div class="add_playlist_div_for_svg">
+                <div class="add_playlist_div_for_svg_under">
+                    <svg role="img" height="12" width="12" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-1bi12j5-0 hDgDGI"><path class="path_playlist" d="M15.25 8a.75.75 0 01-.75.75H8.75v5.75a.75.75 0 01-1.5 0V8.75H1.5a.75.75 0 010-1.5h5.75V1.5a.75.75 0 011.5 0v5.75h5.75a.75.75 0 01.75.75z"></path></svg>
+                </div>
+            </div>
+            <span class="add_playlist_text">Создать плейлист</span>
+          </button>
+          <button class="favorite_tracks">
+            <div class="favorite_tracks_div_for_svg">
+                <div class="favorite_tracks_div_for_svg_under">
+                    <svg role="img" height="12" width="12" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-1bi12j5-0 hDgDGI"><path class="path_favorite_tracks" d="M15.724 4.22A4.313 4.313 0 0012.192.814a4.269 4.269 0 00-3.622 1.13.837.837 0 01-1.14 0 4.272 4.272 0 00-6.21 5.855l5.916 7.05a1.128 1.128 0 001.727 0l5.916-7.05a4.228 4.228 0 00.945-3.577z"></path></svg>
+                </div>
+            </div>
+            <span class="favorite_tracks_text">Любимые треки</span>
+          </button>
+        </div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+
+        
+      </nav>
+    </header>
+    <main class="central_menu">
+      <nav class="central_menu_nav">
+        <div class="left">
+          <button class="left_but">
+            <svg role="img" focusable="false" height="24" width="24" viewBox="0 0 24 24" class="Svg-ytk21e-0 dMCjEC TAwjQ24UpWZGFAfa7bQ3"><polyline points="16 4 7 12 16 20" fill="none" stroke="white"></polyline></svg>
+          </button>
+          <button class="left_but">
+            <svg role="img" focusable="false" height="24" width="24" viewBox="0 0 24 24" class="Svg-ytk21e-0 dMCjEC TAwjQ24UpWZGFAfa7bQ3"><polyline points="8 4 17 12 8 20" fill="none" stroke="white"></polyline></svg>
+          </button>
+        </div>
+        <div class="rigth">
+          <button class="right_but registr">ЗАРЕГЕСТРИРОВАТЬСЯ</button>
+          <button class="right_but join">ВОЙТИ  </button>
+        </div>
+      </nav>
+      <div class="Recommendations_menu_div">
+        <!--
+          Заголовок
+        -->
+        <div class="recommendations_div_header">
+            <h2 class="recommendations_div_h2">
+                <a class="recommendations_div_h2_a">Музыка вашего настроения</a>
+            </h2>
+            <a class="recommendations_div_a">
+                <span class="recommendations_div_a_span">Все</span>
+            </a>
+        </div>
+        <!--
+          Все рекомендации
+        -->
+        <div class="recommendationsLIST">
+          <ul class="recommendationsLIST_ul this_ul">
+              <li>
+                  <div class="recommendationsLIST_ul_li_div">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                      <div class="recommendationsLIST_ul_li_div_NAME">
+                          Жизнь котейки
+                      </div>
+                      <span class="recommendationsLIST_ul_li_div_COMMENT">
+                          Лучшая музыка для ваших питомцев
+                      </span>
+                  </div>
+              </li>
+              <li>
+                <div class="recommendationsLIST_ul_li_div">
+                    <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                    <div class="recommendationsLIST_ul_li_div_NAME">
+                        Жизнь котейки
+                    </div>
+                    <span class="recommendationsLIST_ul_li_div_COMMENT">
+                        Лучшая музыка для ваших питомцев
+                    </span>
+                </div>
+            </li>
+            <li>
+              <div class="recommendationsLIST_ul_li_div">
+                  <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                  <div class="recommendationsLIST_ul_li_div_NAME">
+                      Жизнь котейки
+                  </div>
+                  <span class="recommendationsLIST_ul_li_div_COMMENT">
+                      Лучшая музыка для ваших питомцев
+                  </span>
+              </div>
+          </li>
+          <li>
+            <div class="recommendationsLIST_ul_li_div">
+                <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                <div class="recommendationsLIST_ul_li_div_NAME">
+                    Жизнь котейки
+                </div>
+                <span class="recommendationsLIST_ul_li_div_COMMENT">
+                    Лучшая музыка для ваших питомцев
+                </span>
+            </div>
+        </li>
+        <li>
+          <div class="recommendationsLIST_ul_li_div">
+              <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+              <div class="recommendationsLIST_ul_li_div_NAME">
+                  Жизнь котейки
+              </div>
+              <span class="recommendationsLIST_ul_li_div_COMMENT">
+                  Лучшая музыка для ваших питомцев
+              </span>
+          </div>
+      </li>
+      <li>
+        <div class="recommendationsLIST_ul_li_div">
+            <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+            <div class="recommendationsLIST_ul_li_div_NAME">
+                Жизнь котейки
+            </div>
+            <span class="recommendationsLIST_ul_li_div_COMMENT">
+                Лучшая музыка для ваших питомцев
+            </span>
+        </div>
+    </li>
+    <li>
+                  <div class="recommendationsLIST_ul_li_div">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                      <div class="recommendationsLIST_ul_li_div_NAME">
+                          Жизнь котейки
+                      </div>
+                      <span class="recommendationsLIST_ul_li_div_COMMENT">
+                          Лучшая музыка для ваших питомцев
+                      </span>
+                  </div>
+              </li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="Recommendations_menu_div">
+        <!--
+          Заголовок
+        -->
+        <div class="recommendations_div_header">
+            <h2 class="recommendations_div_h2">
+                <a class="recommendations_div_h2_a">Музыка вашего настроения</a>
+            </h2>
+            <a class="recommendations_div_a">
+                <span class="recommendations_div_a_span">Все</span>
+            </a>
+        </div>
+        <!--
+          Все рекомендации
+        -->
+        <div class="recommendationsLIST">
+          <ul class="recommendationsLIST_ul this_ul">
+              <li>
+                  <div class="recommendationsLIST_ul_li_div">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                      <div class="recommendationsLIST_ul_li_div_NAME">
+                          Жизнь котейки
+                      </div>
+                      <span class="recommendationsLIST_ul_li_div_COMMENT">
+                          Лучшая музыка для ваших питомцев
+                      </span>
+                  </div>
+              </li>
+              <li>
+                <div class="recommendationsLIST_ul_li_div">
+                    <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                    <div class="recommendationsLIST_ul_li_div_NAME">
+                        Жизнь котейки
+                    </div>
+                    <span class="recommendationsLIST_ul_li_div_COMMENT">
+                        Лучшая музыка для ваших питомцев
+                    </span>
+                </div>
+            </li>
+            <li>
+              <div class="recommendationsLIST_ul_li_div">
+                  <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                  <div class="recommendationsLIST_ul_li_div_NAME">
+                      Жизнь котейки
+                  </div>
+                  <span class="recommendationsLIST_ul_li_div_COMMENT">
+                      Лучшая музыка для ваших питомцев
+                  </span>
+              </div>
+          </li>
+          <li>
+            <div class="recommendationsLIST_ul_li_div">
+                <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                <div class="recommendationsLIST_ul_li_div_NAME">
+                    Жизнь котейки
+                </div>
+                <span class="recommendationsLIST_ul_li_div_COMMENT">
+                    Лучшая музыка для ваших питомцев
+                </span>
+            </div>
+        </li>
+        <li>
+          <div class="recommendationsLIST_ul_li_div">
+              <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+              <div class="recommendationsLIST_ul_li_div_NAME">
+                  Жизнь котейки
+              </div>
+              <span class="recommendationsLIST_ul_li_div_COMMENT">
+                  Лучшая музыка для ваших питомцев
+              </span>
+          </div>
+      </li>
+      <li>
+        <div class="recommendationsLIST_ul_li_div">
+            <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+            <div class="recommendationsLIST_ul_li_div_NAME">
+                Жизнь котейки
+            </div>
+            <span class="recommendationsLIST_ul_li_div_COMMENT">
+                Лучшая музыка для ваших питомцев
+            </span>
+        </div>
+    </li>
+    <li>
+                  <div class="recommendationsLIST_ul_li_div">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                      <div class="recommendationsLIST_ul_li_div_NAME">
+                          Жизнь котейки
+                      </div>
+                      <span class="recommendationsLIST_ul_li_div_COMMENT">
+                          Лучшая музыка для ваших питомцев
+                      </span>
+                  </div>
+              </li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="Recommendations_menu_div">
+        <!--
+          Заголовок
+        -->
+        <div class="recommendations_div_header">
+            <h2 class="recommendations_div_h2">
+                <a class="recommendations_div_h2_a">Музыка вашего настроения</a>
+            </h2>
+            <a class="recommendations_div_a">
+                <span class="recommendations_div_a_span">Все</span>
+            </a>
+        </div>
+        <!--
+          Все рекомендации
+        -->
+        <div class="recommendationsLIST">
+          <ul class="recommendationsLIST_ul this_ul">
+              <li>
+                  <div class="recommendationsLIST_ul_li_div">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                      <div class="recommendationsLIST_ul_li_div_NAME">
+                          Жизнь котейки
+                      </div>
+                      <span class="recommendationsLIST_ul_li_div_COMMENT">
+                          Лучшая музыка для ваших питомцев
+                      </span>
+                  </div>
+              </li>
+              <li>
+                <div class="recommendationsLIST_ul_li_div">
+                    <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                    <div class="recommendationsLIST_ul_li_div_NAME">
+                        Жизнь котейки
+                    </div>
+                    <span class="recommendationsLIST_ul_li_div_COMMENT">
+                        Лучшая музыка для ваших питомцев
+                    </span>
+                </div>
+            </li>
+            <li>
+              <div class="recommendationsLIST_ul_li_div">
+                  <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                  <div class="recommendationsLIST_ul_li_div_NAME">
+                      Жизнь котейки
+                  </div>
+                  <span class="recommendationsLIST_ul_li_div_COMMENT">
+                      Лучшая музыка для ваших питомцев
+                  </span>
+              </div>
+          </li>
+          <li>
+            <div class="recommendationsLIST_ul_li_div">
+                <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                <div class="recommendationsLIST_ul_li_div_NAME">
+                    Жизнь котейки
+                </div>
+                <span class="recommendationsLIST_ul_li_div_COMMENT">
+                    Лучшая музыка для ваших питомцев
+                </span>
+            </div>
+        </li>
+        <li>
+          <div class="recommendationsLIST_ul_li_div">
+              <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+              <div class="recommendationsLIST_ul_li_div_NAME">
+                  Жизнь котейки
+              </div>
+              <span class="recommendationsLIST_ul_li_div_COMMENT">
+                  Лучшая музыка для ваших питомцев
+              </span>
+          </div>
+      </li>
+      <li>
+        <div class="recommendationsLIST_ul_li_div">
+            <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+            <div class="recommendationsLIST_ul_li_div_NAME">
+                Жизнь котейки
+            </div>
+            <span class="recommendationsLIST_ul_li_div_COMMENT">
+                Лучшая музыка для ваших питомцев
+            </span>
+        </div>
+    </li>
+    <li>
+                  <div class="recommendationsLIST_ul_li_div">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                      <div class="recommendationsLIST_ul_li_div_NAME">
+                          Жизнь котейки
+                      </div>
+                      <span class="recommendationsLIST_ul_li_div_COMMENT">
+                          Лучшая музыка для ваших питомцев
+                      </span>
+                  </div>
+              </li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="Recommendations_menu_div">
+        <!--
+          Заголовок
+        -->
+        <div class="recommendations_div_header">
+            <h2 class="recommendations_div_h2">
+                <a class="recommendations_div_h2_a">Музыка вашего настроения</a>
+            </h2>
+            <a class="recommendations_div_a">
+                <span class="recommendations_div_a_span">Все</span>
+            </a>
+        </div>
+        <!--
+          Все рекомендации
+        -->
+        <div class="recommendationsLIST">
+          <ul class="recommendationsLIST_ul this_ul">
+              <li>
+                  <div class="recommendationsLIST_ul_li_div">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                      <div class="recommendationsLIST_ul_li_div_NAME">
+                          Жизнь котейки
+                      </div>
+                      <span class="recommendationsLIST_ul_li_div_COMMENT">
+                          Лучшая музыка для ваших питомцев
+                      </span>
+                  </div>
+              </li>
+              <li>
+                <div class="recommendationsLIST_ul_li_div">
+                    <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                    <div class="recommendationsLIST_ul_li_div_NAME">
+                        Жизнь котейки
+                    </div>
+                    <span class="recommendationsLIST_ul_li_div_COMMENT">
+                        Лучшая музыка для ваших питомцев
+                    </span>
+                </div>
+            </li>
+            <li>
+              <div class="recommendationsLIST_ul_li_div">
+                  <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                  <div class="recommendationsLIST_ul_li_div_NAME">
+                      Жизнь котейки
+                  </div>
+                  <span class="recommendationsLIST_ul_li_div_COMMENT">
+                      Лучшая музыка для ваших питомцев
+                  </span>
+              </div>
+          </li>
+          <li>
+            <div class="recommendationsLIST_ul_li_div">
+                <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                <div class="recommendationsLIST_ul_li_div_NAME">
+                    Жизнь котейки
+                </div>
+                <span class="recommendationsLIST_ul_li_div_COMMENT">
+                    Лучшая музыка для ваших питомцев
+                </span>
+            </div>
+        </li>
+        <li>
+          <div class="recommendationsLIST_ul_li_div">
+              <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+              <div class="recommendationsLIST_ul_li_div_NAME">
+                  Жизнь котейки
+              </div>
+              <span class="recommendationsLIST_ul_li_div_COMMENT">
+                  Лучшая музыка для ваших питомцев
+              </span>
+          </div>
+      </li>
+      <li>
+        <div class="recommendationsLIST_ul_li_div">
+            <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+            <div class="recommendationsLIST_ul_li_div_NAME">
+                Жизнь котейки
+            </div>
+            <span class="recommendationsLIST_ul_li_div_COMMENT">
+                Лучшая музыка для ваших питомцев
+            </span>
+        </div>
+    </li>
+    <li>
+                  <div class="recommendationsLIST_ul_li_div">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                      <div class="recommendationsLIST_ul_li_div_NAME">
+                          Жизнь котейки
+                      </div>
+                      <span class="recommendationsLIST_ul_li_div_COMMENT">
+                          Лучшая музыка для ваших питомцев
+                      </span>
+                  </div>
+              </li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="Recommendations_menu_div">
+        <!--
+          Заголовок
+        -->
+        <div class="recommendations_div_header">
+            <h2 class="recommendations_div_h2">
+                <a class="recommendations_div_h2_a">Музыка вашего настроения</a>
+            </h2>
+            <a class="recommendations_div_a">
+                <span class="recommendations_div_a_span">Все</span>
+            </a>
+        </div>
+        <!--
+          Все рекомендации
+        -->
+        <div class="recommendationsLIST">
+          <ul class="recommendationsLIST_ul this_ul">
+              <li>
+                  <div class="recommendationsLIST_ul_li_div">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                      <div class="recommendationsLIST_ul_li_div_NAME">
+                          Жизнь котейки
+                      </div>
+                      <span class="recommendationsLIST_ul_li_div_COMMENT">
+                          Лучшая музыка для ваших питомцев
+                      </span>
+                  </div>
+              </li>
+              <li>
+                <div class="recommendationsLIST_ul_li_div">
+                    <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                    <div class="recommendationsLIST_ul_li_div_NAME">
+                        Жизнь котейки
+                    </div>
+                    <span class="recommendationsLIST_ul_li_div_COMMENT">
+                        Лучшая музыка для ваших питомцев
+                    </span>
+                </div>
+            </li>
+            <li>
+              <div class="recommendationsLIST_ul_li_div">
+                  <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                  <div class="recommendationsLIST_ul_li_div_NAME">
+                      Жизнь котейки
+                  </div>
+                  <span class="recommendationsLIST_ul_li_div_COMMENT">
+                      Лучшая музыка для ваших питомцев
+                  </span>
+              </div>
+          </li>
+          <li>
+            <div class="recommendationsLIST_ul_li_div">
+                <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                <div class="recommendationsLIST_ul_li_div_NAME">
+                    Жизнь котейки
+                </div>
+                <span class="recommendationsLIST_ul_li_div_COMMENT">
+                    Лучшая музыка для ваших питомцев
+                </span>
+            </div>
+        </li>
+        <li>
+          <div class="recommendationsLIST_ul_li_div">
+              <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+              <div class="recommendationsLIST_ul_li_div_NAME">
+                  Жизнь котейки
+              </div>
+              <span class="recommendationsLIST_ul_li_div_COMMENT">
+                  Лучшая музыка для ваших питомцев
+              </span>
+          </div>
+      </li>
+      <li>
+        <div class="recommendationsLIST_ul_li_div">
+            <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+            <div class="recommendationsLIST_ul_li_div_NAME">
+                Жизнь котейки
+            </div>
+            <span class="recommendationsLIST_ul_li_div_COMMENT">
+                Лучшая музыка для ваших питомцев
+            </span>
+        </div>
+    </li>
+    <li>
+                  <div class="recommendationsLIST_ul_li_div">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                      <div class="recommendationsLIST_ul_li_div_NAME">
+                          Жизнь котейки
+                      </div>
+                      <span class="recommendationsLIST_ul_li_div_COMMENT">
+                          Лучшая музыка для ваших питомцев
+                      </span>
+                  </div>
+              </li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="Recommendations_menu_div">
+        <!--
+          Заголовок
+        -->
+        <div class="recommendations_div_header">
+            <h2 class="recommendations_div_h2">
+                <a class="recommendations_div_h2_a">Музыка вашего настроения</a>
+            </h2>
+            <a class="recommendations_div_a">
+                <span class="recommendations_div_a_span">Все</span>
+            </a>
+        </div>
+        <!--
+          Все рекомендации
+        -->
+        <div class="recommendationsLIST">
+          <ul class="recommendationsLIST_ul  this_ul">
+              <li>
+                  <div class="recommendationsLIST_ul_li_div">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                      <div class="recommendationsLIST_ul_li_div_NAME">
+                          Жизнь котейки
+                      </div>
+                      <span class="recommendationsLIST_ul_li_div_COMMENT">
+                          Лучшая музыка для ваших питомцев
+                      </span>
+                  </div>
+              </li>
+              <li>
+                <div class="recommendationsLIST_ul_li_div">
+                    <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                    <div class="recommendationsLIST_ul_li_div_NAME">
+                        Жизнь котейки
+                    </div>
+                    <span class="recommendationsLIST_ul_li_div_COMMENT">
+                        Лучшая музыка для ваших питомцев
+                    </span>
+                </div>
+            </li>
+            <li>
+              <div class="recommendationsLIST_ul_li_div">
+                  <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                  <div class="recommendationsLIST_ul_li_div_NAME">
+                      Жизнь котейки
+                  </div>
+                  <span class="recommendationsLIST_ul_li_div_COMMENT">
+                      Лучшая музыка для ваших питомцев
+                  </span>
+              </div>
+          </li>
+          <li>
+            <div class="recommendationsLIST_ul_li_div">
+                <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                <div class="recommendationsLIST_ul_li_div_NAME">
+                    Жизнь котейки
+                </div>
+                <span class="recommendationsLIST_ul_li_div_COMMENT">
+                    Лучшая музыка для ваших питомцев
+                </span>
+            </div>
+        </li>
+        <li>
+          <div class="recommendationsLIST_ul_li_div">
+              <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+              <div class="recommendationsLIST_ul_li_div_NAME">
+                  Жизнь котейки
+              </div>
+              <span class="recommendationsLIST_ul_li_div_COMMENT">
+                  Лучшая музыка для ваших питомцев
+              </span>
+          </div>
+      </li>
+      <li>
+        <div class="recommendationsLIST_ul_li_div">
+            <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+            <div class="recommendationsLIST_ul_li_div_NAME">
+                Жизнь котейки
+            </div>
+            <span class="recommendationsLIST_ul_li_div_COMMENT">
+                Лучшая музыка для ваших питомцев
+            </span>
+        </div>
+    </li>
+    <li>
+                  <div class="recommendationsLIST_ul_li_div">
+                      <img class="recommendationsLIST_ul_li_div_IMG" src="img/cat_1.jpg" alt="Картинка котика">
+                      <div class="recommendationsLIST_ul_li_div_NAME">
+                          Жизнь котейки
+                      </div>
+                      <span class="recommendationsLIST_ul_li_div_COMMENT">
+                          Лучшая музыка для ваших питомцев
+                      </span>
+                  </div>
+              </li>
+          </ul>
+        </div>
+        
+      </div>
+    </main>
+    <footer class="footer">
+        <div class="footer_div_up">
+          <div class="footer_div_under">
+            <p class="footer_text_one">ПРЕДВАРИТЕЛЬНЫЙ ПРОСМОТР SPOTOFY</p>
+            <p class="footer_text_two">Зарегестрируйся, чтобы слушать музыку и подкасты без ограничений. Иногда мы будем показывать вам рекламу, но ты сможешь пользоваться сервисом бесплатно!</p>
+          </div>
+            <button class="footer_register_button">ЗАРЕГЕСТРИРОВАТЬСЯ</button>
+        </div>
+    </footer>
   </body>
 </html>
