@@ -1,9 +1,7 @@
-var client_id = "05a343f866334a1db3c0800095b80d17"
-var client_secret = "a52cfac5c8cd42e5b59441d0597c5779"
-/**
- * @returns Возвращает токен API для доступа к сервисам Spotify
- */
-async function tok()  {
+import { errCath } from "./errorCath.js";
+import { client_id, client_secret } from "./key.js";
+
+async function token(){
     const res = await fetch('https://accounts.spotify.com/api/token', {
         method: 'POST',
         headers: {
@@ -12,25 +10,39 @@ async function tok()  {
         },
         body: 'grant_type=client_credentials'
             }).catch(function(error){
-                switch(error) {
-                    case 400:
-                        window.localStorage.setItem("status","400");
-                        window.location.href = "http://localhost:3000/error.html";
-                        break;
-                    case 401:
-                        window.localStorage.setItem("status","401");
-                        window.location.href = "http://localhost:3000/error.html";
-                        break;
-                    case 403:
-                        window.localStorage.setItem("status","403");
-                        window.location.href = "http://localhost:3000/error.html";
-                        break;
-                }
+                errCath(error);
             })
-
             const data = await res.json();
-            return data.access_token;
+            var datAccessTok = data.access_token;
+            window.localStorage.setItem("token", datAccessTok);
+            window.localStorage.setItem('tokenTime', +new Date());
+            return datAccessTok;
+}
+
+/**
+ * @returns Возвращает токен API для доступа к сервисам Spotify
+ */
+async function tok()  {
+    if (window.localStorage.getItem("tokenTime") != null){
+        let tokenTime = window.localStorage.tokenTime;
+        let checkTime =  !((+new Date() - tokenTime) > 3600 * 1000);
+        if (!checkTime)
+        {
+            window.localStorage.clear;
         }
+        if((window.localStorage.getItem("token") != null) && (checkTime))
+        {
+            return window.localStorage.token;
+        }
+        else
+        {
+            return token();
+        }
+    }
+    else{
+        return token();
+    }
+}
 
 export{tok,client_id,client_secret};
 

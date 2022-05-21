@@ -1,4 +1,5 @@
 import {tok} from "./token.js";
+import { errCath } from "./errorCath.js";
 /**
  * Функция выводит плейлисты в вкладку поиска
  */
@@ -34,7 +35,11 @@ async function categories(){
             
             let new_container_img = document.createElement("img");
             new_container_img.classList.add("recommendationsLIST_ul_li_div_IMG");
-            new_container_img.src = element.icons[0].url;
+            
+            // Не совсем понял о чем вы, но предположил, что это исправит
+            if (!!element.icons){
+                new_container_img.src = element.icons[0].url;
+            }
 
             let new_container_div = document.createElement("div")
             new_container_div.classList.add("recommendationsLIST_ul_li_div_NAME");
@@ -51,20 +56,7 @@ async function categories(){
             document.querySelector(".recommendationsLIST_ul").appendChild(new_li);
             });
     }).catch(function(error) {
-        switch(error) {
-            case 400:
-                window.localStorage.setItem("status","400");
-                window.location.href = "http://localhost:3000/error.html";
-                break;
-            case 401:
-                window.localStorage.setItem("status","401");
-                window.location.href = "http://localhost:3000/error.html";
-                break;
-            case 403:
-                window.localStorage.setItem("status","403");
-                window.location.href = "http://localhost:3000/error.html";
-                break;
-        }
+        errCath(error);
     })
     
 }

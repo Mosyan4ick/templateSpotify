@@ -1,5 +1,5 @@
 import { tok } from "./token.js";
-
+import { errCath } from "./errorCath.js";
 
 /**
  * Обеспечивает задержку между поисковыми запросами.
@@ -7,18 +7,14 @@ import { tok } from "./token.js";
  * @param {*} ms Кол-во миллисекунд 
  * @returns Вызов функции с задержкой
  */
-const debounce = (fn, ms) => {
+ const debounce = (fn, ms) => {
     let timeout;
-    return function (){
-        const fnCall = () => {
-            fn.apply(this, arguments)
-        }
-        clearTimeout();
-        timeout = setTimeout(fnCall, ms)
-    }
-}
-
-let stat = undefined;
+    return function () {
+      const fnCall = () => { fn.apply(this, arguments) }
+      clearTimeout(timeout);
+      timeout = setTimeout(fnCall, ms)
+    };
+  }
 
 /**
  * Функция для поиска по трекам
@@ -26,7 +22,8 @@ let stat = undefined;
 async function search () {
     if(document.querySelector(".searchLine").value!=""){
         document.querySelector(".searchingBox").style.display = 'flex';
-        fetch('https://api.spotify.com/v1/search?q=track:+'+document.querySelector(".searchLine").value+'++&type=track',{
+       let params = new URLSearchParams({ q: "track\:"+document.querySelector(".searchLine").value, type: "track" });
+        fetch('https://api.spotify.com/v1/search?'+params.toString(),{
             headers:{
                 'Content-Type': 'application/json',
                 'Authorization' : 'Bearer '+ await tok()
@@ -40,7 +37,9 @@ async function search () {
             }
         }).then((data)=>{
             const search_container = document.querySelector(".searchingBox");
-            search_container.innerHTML="";
+            while(search_container.firstChild){
+                search_container.removeChild(search_container.firstChild);
+            }
             data.tracks.items.forEach(element => {
                 const search_container_a = document.createElement("a");
                 search_container_a.classList.add("search_container_a");
@@ -67,23 +66,7 @@ async function search () {
                 search_container.appendChild(search_container_div);
             });
         }).catch(function(error){
-            switch(error){
-                case 400:
-                    stat = 400;
-                    window.localStorage.setItem("status",stat);
-                    window.location.href = "http://localhost:3000/error.html";
-                    break;
-                case 401:
-                    stat = 401;
-                    window.localStorage.setItem("status",stat);
-                    window.location.href = "http://localhost:3000/error.html";
-                    break;
-                case 403:
-                    stat = 403;
-                    window.localStorage.setItem("status",stat);
-                    window.location.href = "http://localhost:3000/error.html";
-                    break;
-            }
+            errCath(error);
         });
     }
     else {
@@ -91,7 +74,11 @@ async function search () {
     }
 };
 
-search = debounce(search, 1000)
-document.querySelector(".searchLine").addEventListener("keydown", async () => {
-    await search();
+
+search = debounce(search, 300);
+
+
+document.querySelector(".searchLine").addEventListener("keyup", async () => {
+        await search();
+        
 })
