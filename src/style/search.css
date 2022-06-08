@@ -164,8 +164,7 @@
 }
 
 .searchingBox{
-    display: none;
-    
+    color:#FFF;
     flex-direction: column;
     position: absolute;
     top: 50px;
@@ -174,7 +173,6 @@
     overflow-y: scroll;
     overflow-x: hidden;
     gap: 15px;
-    margin-left: 30px;
     min-width: 330px;
     background-color: #121212;
     border-width: 5px;
@@ -253,6 +251,7 @@
 }
 
 .search_container_div{
+    display: flex;
     background-color: #181818;
     margin: 0px;
     border-color: #6a6a6a;
@@ -262,6 +261,7 @@
 
 .search_container_span{
     font-weight: 600;
+    align-self: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     margin-left: 10px;
@@ -327,6 +327,18 @@
     height: 40px;
 }
 
+.search_container_content{
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px 0px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.search_container_name{
+    margin-left: 20px;
+}
 
 
 .two_buttons_menu{
@@ -412,6 +424,7 @@
 }
 
 .recommendations_div_a{
+    color: #fff;
     margin: 0px 0px 0px 8px;
     align-self: center;
     display: flex;
@@ -473,6 +486,28 @@
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 10px;
 }
+
+.divButPlay{
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    background-color: #1abc54;
+    border-radius: 30px;
+    width: 200px;
+    height: 40px;
+    position: fixed;
+    bottom: 150px;
+  /*  margin-bottom: 100px;
+     position: static; */
+}
+
+.butPlay{
+    background-color: #000;
+    color: #FFF;
+    margin-right: 10px;
+}
+
+
 @media screen and (max-width:580px) {
     .recommendationsLIST_ul_li_div_COMMENT{
         display: none;
